@@ -3,11 +3,9 @@ package dev.feddema.springsecurityjwtlogin.domain.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Column;
-
 @Data
 @AllArgsConstructor
-public class UserPojo {
+public class UserDto {
     private String username;
     private String password;
 }

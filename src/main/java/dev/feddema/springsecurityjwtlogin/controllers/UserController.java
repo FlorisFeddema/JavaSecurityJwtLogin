@@ -1,6 +1,6 @@
 package dev.feddema.springsecurityjwtlogin.controllers;
 
-import dev.feddema.springsecurityjwtlogin.domain.pojo.UserPojo;
+import dev.feddema.springsecurityjwtlogin.domain.pojo.UserDto;
 import dev.feddema.springsecurityjwtlogin.exceptions.UniqueValueExistsException;
 import dev.feddema.springsecurityjwtlogin.services.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class UserController {
 
     @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public void login(@RequestBody UserPojo user) throws UniqueValueExistsException {
+    public void login(@RequestBody UserDto user) throws UniqueValueExistsException {
         userService.register(user.getUsername(), user.getPassword());
     }
 }
