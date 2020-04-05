@@ -4,7 +4,6 @@ import dev.feddema.springsecurityjwtlogin.domain.User;
 import dev.feddema.springsecurityjwtlogin.exceptions.UniqueValueExistsException;
 import dev.feddema.springsecurityjwtlogin.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Service;
 public class UserService implements IUserService {
 
     private UserRepository repository;
-
     private PasswordEncoder encoder;
 
     @Autowired
@@ -23,7 +21,6 @@ public class UserService implements IUserService {
 
     @Override
     public void register(String username, String password) throws UniqueValueExistsException {
-        encoder = new Argon2PasswordEncoder();
         var user = new User();
         user.setUsername(username);
         user.setPassword(encoder.encode(password));

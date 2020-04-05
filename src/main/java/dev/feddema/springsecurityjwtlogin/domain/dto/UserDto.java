@@ -1,4 +1,4 @@
-package dev.feddema.springsecurityjwtlogin.domain.pojo;
+package dev.feddema.springsecurityjwtlogin.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

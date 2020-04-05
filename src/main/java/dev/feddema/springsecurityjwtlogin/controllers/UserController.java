@@ -1,6 +1,6 @@
 package dev.feddema.springsecurityjwtlogin.controllers;
 
-import dev.feddema.springsecurityjwtlogin.domain.pojo.UserDto;
+import dev.feddema.springsecurityjwtlogin.domain.dto.UserDto;
 import dev.feddema.springsecurityjwtlogin.exceptions.UniqueValueExistsException;
 import dev.feddema.springsecurityjwtlogin.services.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
